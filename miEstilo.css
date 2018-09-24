@@ -26,28 +26,46 @@ body {
     border: 15px solid white;
     border-radius: 50%;
     position: relative;
-    margin: 50px auto;
-    padding: 1rem;
-    background: rgba(101, 196, 72, 0.199);
+    /*margin: 50px auto;
+    background: rgba(101, 196, 72, 0.199);*/
+    box-shadow:
+        0 0 0px rgba(0,0,0,0.1),
+        inset 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
 }
 
 .clock-face {
-    position: relative;
+    position: absolute;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
-    transform: translateY(-3px);
+    /*transform: translateY(-3px);
+    background: rgba(50, 196, 72, 0.199);*/
 }
 
 .hand {
-    width: 50%;
     height: 6px;
     background: black;
     position: absolute;
     top: 50%;
+    right: 50%;
     transform-origin: 100%;
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0, 3.05, 0.58, 1);
+}
+
+.hour-hand {
+    width: 30%;
+}
+
+.min-hand {
+    width: 39%;
+}
+
+.sec-hand {
+    width: 46%;
 }
 
 .clock-center {
@@ -55,8 +73,9 @@ body {
     height: 1rem;
     border-radius: 50%;
     position: absolute;
-    top: 48%;
-    left: 46%;
+    top: 50%;
+    left: 49.6%;
+    margin: -0.5rem 0px 0px -0.5rem;
     background-color: hsl(250,50%,50%);
     border: 2px solid white;
 }
